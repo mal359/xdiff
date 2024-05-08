@@ -50,10 +50,10 @@
 #include <X11/StringDefs.h>
 
 /* Widget defines */
-#define	XD_LEFT				( 1)
-#define XD_RIGHT			( 2)
-#define XD_NEXT				( 3)
-#define XD_PREV				( 4)
+#define	XD_LEFT		( 1)
+#define XD_RIGHT	( 2)
+#define XD_NEXT		( 3)
+#define XD_PREV		( 4)
 
 typedef struct {
 	Pixel		foregroundColour;
@@ -61,52 +61,52 @@ typedef struct {
 	XFontStruct	*font;
 } XDattribute;
 
-typedef struct {				/* All there is to know for one instance.	*/
-	char			*appInstance;
-	char			*appClass;
+typedef struct {	/* All there is to know for one instance.	      */
+	char		*appInstance;
+	char		*appClass;
 	XtAppContext	appContext;
-	Display			*display;
-	int				screen;
-	GC				gc;
+	Display		*display;
+	int		screen;
+	GC		gc;
 
-	int				tabWidth;
-	Boolean			lineNumbers;
-	Boolean			confirmWrite;
-	char			*stdinName;
+	int		tabWidth;
+	Boolean		lineNumbers;
+	Boolean		confirmWrite;
+	char		*stdinName;
 
-	XDlist			diffs;
-	char			*pathNames[ 3 ];
-	XDattribute		attributes[ 6 ];
-	Pixel			cursorColour;
-	Pixel			matchColour;
-	XCharStruct		maxBounds;
+	XDlist		diffs;
+	char		*pathNames[ 3 ];
+	XDattribute	attributes[ 6 ];
+	Pixel		cursorColour;
+	Pixel		matchColour;
+	XCharStruct	maxBounds;
 
-	Widget			appShell;		/* A bunch of widgets.					*/
-	Widget			mainWindow;
-	Widget			mainForm;
-	Widget			viewArea;
-	Widget			textForm;
-	Widget			messageLine;
-	Widget			leftWindow;
-	Widget			rightWindow;
-	Widget			vertScroll;
-	Widget			leftScroll;
-	Widget			rightScroll;
+	Widget		appShell;	/* A bunch of widgets.		      */
+	Widget		mainWindow;
+	Widget		mainForm;
+	Widget		viewArea;
+	Widget		textForm;
+	Widget		messageLine;
+	Widget		leftWindow;
+	Widget		rightWindow;
+	Widget		vertScroll;
+	Widget		leftScroll;
+	Widget		rightScroll;
 
-	Widget			selectorShell;
-	Widget			searchShell;
-	Widget			fileSelector;
-	Widget			confirmShell;
-	Widget			messageBox;
+	Widget		selectorShell;
+	Widget		searchShell;
+	Widget		fileSelector;
+	Widget		confirmShell;
+	Widget		messageBox;
 } ApplicationData;
 
 typedef struct {
-	String name;					/* The name of this button.				*/
-	XtCallbackProc inputCallback;	/* Activate Callback procedure.			*/
+	String name;			/* The name of this button.	      */
+	XtCallbackProc	inputCallback;	/* Activate Callback procedure.	      */
 } xdMenuButton;
 
 typedef struct {
-	String			name;			/* The name of the pull down.			*/
-	xdMenuButton	*buttons;		/* Array of the buttons for this menu.	*/
-	int				n;				/* Number of buttons in the menu.		*/
+	String		name;		/* The name of the pull down.	      */
+	xdMenuButton	*buttons;	/* Array of the buttons for this menu.*/
+	int		n;		/* Number of buttons in the menu.     */
 } xdPullDown;

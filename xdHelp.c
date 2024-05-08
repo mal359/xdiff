@@ -70,7 +70,7 @@ void xdShowHelpMessage (
  */
 
 Widget parent,                  /*< Parent widget.                          */
-char *widgetName             /*< Display help for this widget.           */
+char *widgetName		/*< Display help for this widget.           */
 )
 { /**************************************************************************/
 
@@ -89,7 +89,8 @@ char *widgetName             /*< Display help for this widget.           */
     /* Create the help Window and it's popup shell */
 
 
-    helpShell = XmCreateInformationDialog(appData->mainWindow, "helpWindow", NULL, 0);
+    helpShell = XmCreateInformationDialog(appData->mainWindow, "helpWindow", 
+    	NULL, 0);
 
     XtAddCallback( helpShell,
 		   XmNokCallback, xdHelpDialogCallback, helpShell );

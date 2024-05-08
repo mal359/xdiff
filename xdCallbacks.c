@@ -467,7 +467,7 @@ void rightWindowExposeCallback (
  */
 
 Widget drawingArea,                 /*< Where to do the drawing.            */
-XtPointer data,                      /*< All application Data.               */
+XtPointer data,                     /*< All application Data.               */
 XtPointer callData                  /*< Data from Widget Class.             */
 )
 { /**************************************************************************/
